@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <div class="row elem-busqueda no-gutters">
+        <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 busqueda">
+          <p>Piloto</p>
+          <input type="text" name="Piloto" id="piloto" [(ngModel)]="piloto" >
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 busqueda">
+          <p>Circuito</p>
+          <input type="text" name="Circuito" id="circuito" [(ngModel)]="circuito">
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 busqueda">
+          <p>Coche</p>
+          <input type="text" name="Coche" id="coche" [(ngModel)]="coche">
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 busqueda">
+          <p>Temporda</p>
+          <input type="text" name="Temporada" id="temporada" [(ngModel)]="temporada">
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 busqueda">
+          <button id="buscar" (click)="buscar_circuitos()">Buscar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <table class="circuitos">
+        <tr>
+          <td>
+            Nombre del circuito
+          </td>
+          <td class="espacio">
+            Ciudad
+          </td>
+          <td class="espacio">
+            Pais
+          </td>
+          <td class="espacio">
+            ID
+          </td>
+          <td>
+            Información
+          </td>
+        </tr>
+        <!-- Codigo conductores -->
+        <tr *ngFor="let circuito of circuitos">
+          <td>
+            {{ circuito.circuitName }}
+          </td>
+          <td>
+            {{ circuito.Location.locality }}
+          </td>
+          <td>
+            {{ circuito.Location.country }}
+          </td>
+          <td>
+            {{ circuito.circuitId }}
+          </td>
+          <td class="espacio">
+            <a href="{{ circuito.url }}" target="_blank">Biografia</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <div class="pag">
+        <p>Páginas: </p>
+        <!-- <p (click)="pag_anterior()"><a>&#60;&#60;Anterior</a></p> -->
+        <p *ngFor="let num_pag of total_pag" (click)="pagina_circuitos(num_pag)">{{ num_pag }}</p>
+        <!-- <p (click)="siguiente_pag()"><a>Siguiente&#62;&#62;</a></p> -->
+      </div>
+    </div>
+  </div>
+</div>

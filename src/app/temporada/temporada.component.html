@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <table class="temporada">
+        <tr>
+          <td>
+            Temporada
+          </td>
+          <td class="espacio">
+            Ronda
+          </td>
+          <td class="espacio">
+            Nombre de la carrera
+          </td>
+          <td class="espacio">
+            Fecha
+          </td>
+          <td class="espacio">
+            Circuito
+          </td>
+          <td class="espacio">
+            Ciudad
+          </td>
+          <td class="espacio">
+            País
+          </td>
+          <td>
+            Información
+          </td>
+        </tr>
+
+        <!-- Codigo De la temporada -->
+        <tr *ngFor="let info of temporada" class="fila">
+          <td>
+             {{ info.season }}
+          </td>
+          <td>
+            {{ info.round }}
+          </td>
+          <td>
+            {{ info.raceName }}
+          </td>
+          <td>
+            {{ info.date }}
+          </td>
+          <td>
+            {{ info.Circuit.circuitName }}
+          </td>
+          <td>
+            {{ info.Circuit.Location.locality }}
+          </td>
+          <td>
+            {{ info.Circuit.Location.country }}
+          </td>
+          <td class="espacio">
+            <a href="{{ info.url }}" target="_blank">Información de la carrera</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+</div>

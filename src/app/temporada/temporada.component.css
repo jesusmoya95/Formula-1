@@ -1,0 +1,50 @@
+.elem-busqueda{
+    margin-top: 20px;
+}
+.busqueda p{
+    display: inline;
+}
+
+.pag p{
+    display: inline;
+    margin: 0 10px;
+    padding: 3px;
+    cursor:pointer; 
+    cursor: hand;
+}
+
+.pag_select{
+    color: brown;
+    font:bold;
+}
+
+.espacio{
+    padding: 0 50px;
+}
+
+.fila :hover{
+    background-color: gray;
+}
+
+.pag p :hover{
+    background-color: gray;
+    color: brown;
+}
+
+.busqueda{
+    margin: 10px 0;
+    background-color: #AAAAAA;
+    padding: 10px;
+}
+
+.busqueda input{
+    background-color: #DDDDDD;
+}
+
+.temporada{
+    text-align: center;
+}
+
+td{
+    border: 2px double gray;
+}

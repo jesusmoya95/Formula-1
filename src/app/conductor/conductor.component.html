@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    
+
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <table class="conductores">
+        <tr>
+          <td>
+            Nombre
+          </td>
+          <td class="espacio">
+            Apellido
+          </td>
+          <td class="espacio">
+            Nacionalidad
+          </td>
+          <td class="espacio">
+            Fecha nacimiento
+          </td>
+          <td class="espacio">
+            Numero
+          </td>
+          <td>
+            Información
+          </td>
+        </tr>
+        <!-- Codigo conductores -->
+        <tr *ngFor="let a_conductor of conductor">
+          <td>
+            {{ a_conductor.givenName }}
+          </td>
+          <td>
+            {{ a_conductor.familyName }}
+          </td>
+          <td>
+            {{ a_conductor.nationality }}
+          </td>
+          <td>
+            {{ a_conductor.dateOfBirth }}
+          </td>
+          <td>
+            {{ a_conductor.permanentNumber }}
+          </td>
+          <td class="espacio">
+            <a href="{{ a_conductor.url }}" target="_blank">Biografía</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+</div>
